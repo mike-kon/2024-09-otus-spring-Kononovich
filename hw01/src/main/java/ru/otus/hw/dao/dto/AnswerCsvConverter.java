@@ -6,7 +6,7 @@ import ru.otus.hw.domain.Answer;
 public class AnswerCsvConverter extends AbstractCsvConverter {
 
     @Override
-    public Object convertToRead(String value) {
+    public Answer convertToRead(String value) {
         var valueArr = value.split("%");
         return new Answer(valueArr[0], Boolean.parseBoolean(valueArr[1]));
     }
